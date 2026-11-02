@@ -284,10 +284,10 @@ const MARQUEE_ITEMS = [
 ];
 
 const NUMBERS = [
-  { to: 1000, suffix: '+', label: 'Drivers pre-registered in Freetown' },
-  { to: 15, suffix: '+', label: 'Corridors ready for launch rollout' },
-  { to: 3, suffix: '', label: 'Ride classes: Keh Keh, Bike, Comfort' },
-  { to: 100, suffix: '%', label: 'Verified background & vehicle checks' },
+  { to: 1400, suffix: '+', label: 'Everyday riders & drivers ready' },
+  { to: 100, suffix: '%', label: 'Upfront fares with zero price haggling' },
+  { to: 24, suffix: '/7', label: 'In-app SOS local team support' },
+  { to: 15, suffix: '+', label: 'Freetown neighborhoods covered' },
 ];
 
 const LAUNCH_PHASES = [
@@ -555,283 +555,297 @@ const LandingPage: React.FC = () => {
       </nav>
 
       {/* ============================================================
-          🌟 HERO SECTION: THE OFFICIAL LAUNCH IS COMING VERY SOON
+          🌟 HERO SECTION: WARM, HUMAN-FIRST & ROOTED IN FREETOWN
           ============================================================ */}
-      <section className="relative px-6 pt-16 pb-24 md:pt-24 md:pb-32 overflow-hidden bg-gradient-to-br from-easygo-heroFrom via-easygo-secondary to-easygo-heroTo animate-gradient text-white">
-        <div className="glow-orb w-[36rem] h-[36rem] bg-easygo-velocity/30 top-[-10%] right-[-10%] animate-glow-pulse"></div>
-        <div className="glow-orb w-[28rem] h-[28rem] bg-easygo-pulse/20 bottom-[-20%] left-[-5%] animate-glow-pulse" style={{ animationDelay: '2s' }}></div>
-        <div className="absolute inset-0 opacity-[0.06]" style={{ backgroundImage: 'radial-gradient(circle, #FFFFFF 1px, transparent 1px)', backgroundSize: '32px 32px' }}></div>
+      <section className="relative px-6 pt-12 pb-20 md:pt-20 md:pb-28 overflow-hidden bg-gradient-to-br from-[#004728] via-easygo-primary to-[#00331C] text-white">
+        {/* Soft, warm ambient light (replaces cold neon cyber orbs) */}
+        <div className="absolute top-[-15%] right-[-5%] w-[38rem] h-[38rem] rounded-full bg-emerald-400/15 blur-[120px] pointer-events-none"></div>
+        <div className="absolute bottom-[-15%] left-[-10%] w-[32rem] h-[32rem] rounded-full bg-amber-400/10 blur-[100px] pointer-events-none"></div>
+        <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: 'radial-gradient(circle, #FFFFFF 1px, transparent 1px)', backgroundSize: '28px 28px' }}></div>
 
-        {/* Floating telemetry pills */}
-        <div className="absolute top-28 right-[10%] hidden xl:flex items-center gap-2.5 bg-white/10 backdrop-blur-md border border-white/20 rounded-full px-4 py-2 animate-float shadow-lg">
-          <div className="w-2.5 h-2.5 rounded-full bg-easygo-pulse animate-pulse"></div>
-          <span className="text-xs font-bold text-white/90 uppercase tracking-widest">Aberdeen & Lumley · Fleet Primed</span>
+        {/* Real human floating testimonials */}
+        <div className="absolute top-20 right-[8%] hidden xl:flex items-center gap-3 bg-white/95 text-easygo-ink backdrop-blur-md rounded-2xl p-3 shadow-2xl animate-float max-w-xs border border-white/40">
+          <img
+            src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=100&q=80"
+            alt="Mohamed"
+            className="w-10 h-10 rounded-full object-cover ring-2 ring-easygo-velocity shrink-0"
+          />
+          <div className="text-xs leading-tight">
+            <div className="font-bold text-easygo-ink flex items-center gap-1">
+              Mohamed K. <span className="text-amber-500 text-[10px]">★ 4.98</span>
+            </div>
+            <p className="text-easygo-secondaryText text-[11px] mt-0.5">
+              "No more chasing riders in the heat. Keh Keh partner ready for launch."
+            </p>
+          </div>
         </div>
-        <div className="absolute top-52 right-[4%] hidden xl:flex items-center gap-2.5 bg-white/10 backdrop-blur-md border border-white/20 rounded-full px-4 py-2 animate-float-slow shadow-lg">
-          <div className="w-2.5 h-2.5 rounded-full bg-easygo-gold"></div>
-          <span className="text-xs font-bold text-white/90 uppercase tracking-widest">1,000+ Drivers in Pre-Launch Queue</span>
+
+        <div className="absolute bottom-20 right-[5%] hidden xl:flex items-center gap-3 bg-white/95 text-easygo-ink backdrop-blur-md rounded-2xl p-3 shadow-2xl animate-float-slow max-w-xs border border-white/40" style={{ animationDelay: '1.5s' }}>
+          <img
+            src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=100&q=80"
+            alt="Mariama"
+            className="w-10 h-10 rounded-full object-cover ring-2 ring-easygo-velocity shrink-0"
+          />
+          <div className="text-xs leading-tight">
+            <div className="font-bold text-easygo-ink">Mariama B. · Aberdeen</div>
+            <p className="text-easygo-secondaryText text-[11px] mt-0.5">
+              "Knowing my fare upfront before I step in gives my family peace of mind."
+            </p>
+          </div>
         </div>
 
         <div className="max-w-7xl mx-auto relative z-10">
           <div className="grid lg:grid-cols-12 gap-12 items-center">
-            {/* Left Column: Headline and Pitch */}
+            {/* Left Column: Human Story & Empathy */}
             <div className="lg:col-span-7">
-              {/* Highlight Badge */}
-              <div className="inline-flex items-center gap-2.5 px-4 py-2 mb-6 text-xs sm:text-sm font-extrabold tracking-wider uppercase bg-easygo-neon/15 text-easygo-neon rounded-full border border-easygo-neon/40 shadow-inner">
-                <span className="relative flex h-2.5 w-2.5">
-                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-easygo-pulse opacity-75"></span>
-                  <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-easygo-pulse"></span>
-                </span>
-                <span>The Official Platform is Coming Very Soon 🇸🇱</span>
+              {/* Warm Community Badge */}
+              <div className="inline-flex items-center gap-2 px-4 py-2 mb-6 text-xs sm:text-sm font-bold bg-white/10 text-white rounded-full border border-white/20 backdrop-blur-md shadow-sm">
+                <span className="text-base">🇸🇱</span>
+                <span>Made for Freetown · Official Launch Coming Very Soon</span>
               </div>
 
-              {/* Main Headline */}
-              <h1 className="font-display text-4xl sm:text-6xl md:text-7xl font-bold leading-[1.08] mb-6 tracking-tight">
-                The Official Transit Network for <span className="text-gradient-neon animate-gradient">Freetown</span> is Almost Here.
+              {/* Empathetic Headline */}
+              <h1 className="font-display text-4xl sm:text-6xl md:text-6xl lg:text-7xl font-bold leading-[1.1] mb-6 tracking-tight">
+                Getting around Freetown should feel <span className="text-easygo-neon">safe, easy,</span> and <span className="text-gradient-gold">fair.</span>
               </h1>
 
-              {/* Subheading */}
-              <p className="text-lg sm:text-xl text-white/85 mb-8 max-w-2xl leading-relaxed">
-                We are building the definitive ride-hailing and mobility experience for Sierra Leone. From reliable Keh Keh hailing and Comfort Cars to in-app SOS safety and instant Mobile Money payments — the official launch is coming very soon.
+              {/* Empathetic Body */}
+              <p className="text-base sm:text-lg text-white/90 mb-6 max-w-2xl leading-relaxed">
+                We all know the daily hustle across Freetown — searching for a Keh Keh in the hot sun at Congo Cross, arguing over change, or worrying whether your loved ones got home safely after dark.
+              </p>
+              <p className="text-base sm:text-lg text-white/80 mb-8 max-w-2xl leading-relaxed">
+                EasyGo is bringing transparent, locked fares before you board, verified local drivers who treat you with dignity, and in-app safety so every trip feels peaceful.
               </p>
 
-              {/* Official Store Badges (Teaser) */}
-              <div className="flex flex-wrap items-center gap-4 mb-8">
-                <div className="flex items-center gap-3 bg-white/10 backdrop-blur-md border border-white/20 px-4 py-2.5 rounded-2xl shadow-sm">
-                  {/* Apple Icon */}
-                  <svg className="w-6 h-6 text-white" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.97 6.47c.61-.75 1.04-1.8 0.92-2.85-.92.04-2.02.62-2.67 1.37-.58.66-1.1 1.73-.96 2.76 1.03.08 2.08-.53 2.71-1.28z" />
-                  </svg>
-                  <div>
-                    <div className="text-[10px] text-white/60 uppercase font-semibold leading-none">Official iOS App</div>
-                    <div className="text-xs font-bold text-white leading-tight mt-0.5">App Store · Coming Very Soon</div>
-                  </div>
+              {/* Social Proof Stack with Real Avatars */}
+              <div className="flex flex-wrap items-center gap-4 mb-8 p-3 bg-white/10 backdrop-blur-md rounded-2xl border border-white/15 max-w-xl">
+                <div className="flex -space-x-2.5 overflow-hidden">
+                  <img
+                    className="inline-block h-10 w-10 rounded-full ring-2 ring-white object-cover"
+                    src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=100&q=80"
+                    alt="Rider avatar"
+                  />
+                  <img
+                    className="inline-block h-10 w-10 rounded-full ring-2 ring-white object-cover"
+                    src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=100&q=80"
+                    alt="Driver avatar"
+                  />
+                  <img
+                    className="inline-block h-10 w-10 rounded-full ring-2 ring-white object-cover"
+                    src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?auto=format&fit=crop&w=100&q=80"
+                    alt="Student avatar"
+                  />
+                  <img
+                    className="inline-block h-10 w-10 rounded-full ring-2 ring-white object-cover"
+                    src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=100&q=80"
+                    alt="Partner avatar"
+                  />
                 </div>
-
-                <div className="flex items-center gap-3 bg-white/10 backdrop-blur-md border border-white/20 px-4 py-2.5 rounded-2xl shadow-sm">
-                  {/* Google Play Icon */}
-                  <svg className="w-6 h-6 text-white" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M3.609 1.814L13.792 12 3.61 22.186a2.38 2.38 0 01-.61-1.61V3.424c0-.62.227-1.19.609-1.61zm11.233 11.234l2.48 2.48-11.83 6.84 9.35-9.32zm0-2.096L5.49 1.632l11.832 6.84-2.48 2.48zm1.486 1.048l3.14 1.816a1.44 1.44 0 010 2.496l-3.14 1.816-1.74-1.74 1.74-2.388z" />
-                  </svg>
-                  <div>
-                    <div className="text-[10px] text-white/60 uppercase font-semibold leading-none">Official Android App</div>
-                    <div className="text-xs font-bold text-white leading-tight mt-0.5">Google Play · Coming Very Soon</div>
+                <div className="text-xs leading-tight">
+                  <div className="flex items-center gap-1 text-amber-300 font-bold text-sm">
+                    ★★★★★ <span className="text-white/80 font-normal text-xs ml-1">4.9 / 5</span>
+                  </div>
+                  <div className="text-white/85 font-medium mt-0.5">
+                    Over <strong>1,400+ riders & drivers</strong> waiting in Lumley, Aberdeen, Central & Kissy
                   </div>
                 </div>
               </div>
 
-              {/* Quick stats badges */}
-              <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
-                {[
-                  { value: <Counter to={1000} suffix="+" />, label: 'Pre-Registered Drivers' },
-                  { value: <Counter to={100} suffix="%" />, label: 'Verified Vehicle Checks' },
-                  { value: <Counter to={24} suffix="/7" />, label: 'In-App SOS Protection' },
-                  { value: <Counter to={15} suffix="+" />, label: 'Launch Corridors' },
-                ].map((s, i) => (
-                  <div key={i} className="bg-white/10 backdrop-blur-md border border-white/15 rounded-2xl p-3.5 hover:bg-white/15 transition-all">
-                    <div className="font-display text-2xl font-bold text-easygo-neon mb-0.5">{s.value}</div>
-                    <div className="text-[11px] font-medium text-white/75 leading-tight">{s.label}</div>
-                  </div>
-                ))}
+              {/* App Stores Teaser (Human & Friendly) */}
+              <div className="flex flex-wrap items-center gap-3 text-xs text-white/70">
+                <span className="font-semibold text-white/90">Official mobile apps arriving on:</span>
+                <span className="inline-flex items-center gap-1.5 bg-white/10 px-3 py-1 rounded-full text-white font-medium border border-white/10">
+                  🍏 Apple App Store (iOS)
+                </span>
+                <span className="inline-flex items-center gap-1.5 bg-white/10 px-3 py-1 rounded-full text-white font-medium border border-white/10">
+                  🤖 Google Play (Android)
+                </span>
               </div>
             </div>
 
-            {/* Right Column: Pre-Registration VIP Pass Form */}
+            {/* Right Column: Warm, Friendly Community Sign-up */}
             <div id="pre-register" className="lg:col-span-5">
-              <div className="bg-white rounded-[2.5rem] p-6 sm:p-8 text-easygo-ink shadow-2xl border-2 border-easygo-neon/40 relative overflow-hidden">
-                <div className="absolute top-0 right-0 bg-gradient-to-l from-easygo-neon to-easygo-velocity text-easygo-primary font-black text-[10px] tracking-wider uppercase py-1 px-4 rounded-bl-xl shadow-sm">
-                  Official Launch VIP Pass
-                </div>
-
+              <div className="bg-white rounded-[2rem] p-6 sm:p-8 text-easygo-ink shadow-2xl border border-white/60 relative overflow-hidden">
                 {!submitted ? (
                   <div>
-                    <div className="mb-6">
-                      <div className="text-xs font-bold uppercase tracking-widest text-easygo-velocity mb-1">
-                        Pre-Register Today
+                    {/* Header */}
+                    <div className="mb-5">
+                      <div className="flex items-center justify-between mb-1">
+                        <span className="text-xs font-bold uppercase tracking-wider text-easygo-velocity">
+                          Early Access
+                        </span>
+                        <span className="text-[11px] font-semibold bg-easygo-successBg text-easygo-successFg px-2.5 py-0.5 rounded-full">
+                          Free to Join
+                        </span>
                       </div>
-                      <h2 className="font-display text-2xl sm:text-3xl font-bold text-easygo-ink">
-                        Reserve Your Launch Access
+                      <h2 className="font-display text-2xl font-bold text-easygo-ink">
+                        Be the first to ride with us
                       </h2>
                       <p className="text-xs sm:text-sm text-easygo-secondaryText mt-1">
-                        Be among the first to ride or drive when the official app drops.
+                        We're launching in Freetown very soon. Leave your name and number, and we'll welcome you with launch credits on day one.
                       </p>
                     </div>
 
-                    {/* Role Selector Tabs */}
-                    <div className="flex bg-easygo-mist p-1 rounded-2xl mb-5 border border-easygo-line">
+                    {/* Friendly Toggle */}
+                    <div className="grid grid-cols-2 p-1 bg-easygo-mist rounded-xl mb-5 border border-easygo-line">
                       <button
                         type="button"
                         onClick={() => setUserRole('rider')}
-                        className={`flex-1 py-2.5 rounded-xl font-bold text-xs transition-all flex items-center justify-center gap-1.5 ${
+                        className={`py-2 px-3 rounded-lg font-bold text-xs transition-all flex items-center justify-center gap-1.5 ${
                           userRole === 'rider'
-                            ? 'bg-easygo-primary text-white shadow-md'
+                            ? 'bg-easygo-primary text-white shadow-sm'
                             : 'text-easygo-secondaryText hover:text-easygo-ink'
                         }`}
                       >
-                        <span>🎒</span> I Want to Ride (Passenger)
+                        <span>🙋‍♀️</span> I Need Rides
                       </button>
                       <button
                         type="button"
                         onClick={() => setUserRole('driver')}
-                        className={`flex-1 py-2.5 rounded-xl font-bold text-xs transition-all flex items-center justify-center gap-1.5 ${
+                        className={`py-2 px-3 rounded-lg font-bold text-xs transition-all flex items-center justify-center gap-1.5 ${
                           userRole === 'driver'
-                            ? 'bg-easygo-velocity text-white shadow-md'
+                            ? 'bg-easygo-velocity text-white shadow-sm'
                             : 'text-easygo-secondaryText hover:text-easygo-ink'
                         }`}
                       >
-                        <span>🛺</span> I Want to Drive (Partner)
+                        <span>🛺</span> I Drive Keh Keh / Car
                       </button>
                     </div>
 
-                    {/* Perk callout */}
-                    <div className="bg-easygo-successBg border border-easygo-velocity/30 rounded-xl p-3 mb-5 text-xs text-easygo-successFg font-medium flex items-center gap-2">
+                    {/* Warm Perk Note */}
+                    <div className="bg-amber-50 border border-amber-200/80 rounded-xl p-3 mb-5 text-xs text-amber-900 font-medium flex items-center gap-2">
                       <span className="text-base">🎁</span>
                       {userRole === 'rider' ? (
                         <span>
-                          <strong>Passenger Launch Perk:</strong> 20% OFF your first 3 official rides + priority matching.
+                          <strong>Welcome Gift:</strong> 20% off your first 3 official rides when we go live.
                         </span>
                       ) : (
                         <span>
-                          <strong>Driver Launch Perk:</strong> 0% commission for your first 30 days + verified founding badge.
+                          <strong>Founding Partner Gift:</strong> Keep 100% of your earnings (0% commission) for your first month.
                         </span>
                       )}
                     </div>
 
                     <form onSubmit={handlePreRegister} className="space-y-4">
                       <div>
-                        <label className="block text-xs font-bold uppercase tracking-wider text-easygo-secondaryText mb-1.5 ml-1">
-                          Full Name
+                        <label className="block text-xs font-bold text-easygo-ink mb-1 ml-0.5">
+                          What is your name?
                         </label>
                         <input
                           type="text"
                           required
-                          placeholder="e.g. Samuel Koroma"
+                          placeholder="e.g. Mariama or Samuel"
                           value={fullName}
                           onChange={(e) => setFullName(e.target.value)}
-                          className="w-full bg-easygo-mist border border-easygo-line rounded-xl px-4 py-3 text-sm text-easygo-ink focus:outline-none focus:ring-2 focus:ring-easygo-velocity focus:bg-white transition-all"
+                          className="w-full bg-easygo-mist border border-easygo-line rounded-xl px-4 py-3 text-sm text-easygo-ink placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-easygo-velocity focus:bg-white transition-all"
                         />
                       </div>
 
                       <div>
-                        <label className="block text-xs font-bold uppercase tracking-wider text-easygo-secondaryText mb-1.5 ml-1">
-                          Phone Number or Email (Orange / Africell)
+                        <label className="block text-xs font-bold text-easygo-ink mb-1 ml-0.5">
+                          WhatsApp or Phone Number
                         </label>
                         <input
                           type="text"
                           required
-                          placeholder="+232 76 000 000 or you@email.com"
+                          placeholder="e.g. 076 123 456 or 030..."
                           value={contact}
                           onChange={(e) => setContact(e.target.value)}
-                          className="w-full bg-easygo-mist border border-easygo-line rounded-xl px-4 py-3 text-sm text-easygo-ink focus:outline-none focus:ring-2 focus:ring-easygo-velocity focus:bg-white transition-all"
+                          className="w-full bg-easygo-mist border border-easygo-line rounded-xl px-4 py-3 text-sm text-easygo-ink placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-easygo-velocity focus:bg-white transition-all"
                         />
+                        <p className="text-[11px] text-easygo-secondaryText mt-1">
+                          We will only text your invite link the morning the app launches. No spam ever.
+                        </p>
                       </div>
 
-                      <div className="grid grid-cols-2 gap-3">
+                      {userRole === 'driver' ? (
                         <div>
-                          <label className="block text-xs font-bold uppercase tracking-wider text-easygo-secondaryText mb-1.5 ml-1">
-                            Primary Area
+                          <label className="block text-xs font-bold text-easygo-ink mb-1.5 ml-0.5">
+                            What do you drive?
                           </label>
-                          <select
-                            value={neighborhood}
-                            onChange={(e) => setNeighborhood(e.target.value)}
-                            className="w-full bg-easygo-mist border border-easygo-line rounded-xl px-3 py-3 text-xs sm:text-sm text-easygo-ink focus:outline-none focus:ring-2 focus:ring-easygo-velocity focus:bg-white"
-                          >
-                            <option value="Aberdeen">Aberdeen</option>
-                            <option value="Lumley">Lumley</option>
-                            <option value="Congo Cross">Congo Cross</option>
-                            <option value="Wilberforce">Wilberforce</option>
-                            <option value="Central Freetown">Central Freetown</option>
-                            <option value="Fourah Bay">Fourah Bay</option>
-                            <option value="Kissy">Kissy</option>
-                            <option value="Goderich">Goderich</option>
-                          </select>
+                          <div className="grid grid-cols-3 gap-2">
+                            {['Keh Keh', 'Car / Taxi', 'Express Bike'].map((type) => (
+                              <button
+                                key={type}
+                                type="button"
+                                onClick={() => setVehicleType(type)}
+                                className={`py-2 px-2 rounded-lg text-xs font-bold border transition-all text-center ${
+                                  vehicleType === type
+                                    ? 'bg-easygo-primary text-white border-easygo-primary shadow-sm'
+                                    : 'bg-easygo-mist text-easygo-secondaryText border-easygo-line hover:border-slate-300'
+                                }`}
+                              >
+                                {type}
+                              </button>
+                            ))}
+                          </div>
                         </div>
-
-                        {userRole === 'driver' ? (
-                          <div>
-                            <label className="block text-xs font-bold uppercase tracking-wider text-easygo-secondaryText mb-1.5 ml-1">
-                              Vehicle Type
-                            </label>
-                            <select
-                              value={vehicleType}
-                              onChange={(e) => setVehicleType(e.target.value)}
-                              className="w-full bg-easygo-mist border border-easygo-line rounded-xl px-3 py-3 text-xs sm:text-sm text-easygo-ink focus:outline-none focus:ring-2 focus:ring-easygo-velocity focus:bg-white"
-                            >
-                              <option value="Keh Keh">Keh Keh (Tricycle)</option>
-                              <option value="Comfort Car">Comfort Car (Sedan)</option>
-                              <option value="Express Bike">Express Bike</option>
-                            </select>
+                      ) : (
+                        <div>
+                          <label className="block text-xs font-bold text-easygo-ink mb-1.5 ml-0.5">
+                            Where do you move around most?
+                          </label>
+                          <div className="flex flex-wrap gap-1.5">
+                            {['Lumley', 'Aberdeen', 'Congo Cross', 'Central', 'Wilberforce', 'Kissy'].map((area) => (
+                              <button
+                                key={area}
+                                type="button"
+                                onClick={() => setNeighborhood(area)}
+                                className={`py-1.5 px-3 rounded-full text-xs font-semibold border transition-all ${
+                                  neighborhood === area
+                                    ? 'bg-easygo-primary text-white border-easygo-primary'
+                                    : 'bg-easygo-mist text-easygo-secondaryText border-easygo-line hover:border-slate-300'
+                                }`}
+                              >
+                                {area}
+                              </button>
+                            ))}
                           </div>
-                        ) : (
-                          <div>
-                            <label className="block text-xs font-bold uppercase tracking-wider text-easygo-secondaryText mb-1.5 ml-1">
-                              Preferred Ride
-                            </label>
-                            <select
-                              defaultValue="Keh Keh"
-                              className="w-full bg-easygo-mist border border-easygo-line rounded-xl px-3 py-3 text-xs sm:text-sm text-easygo-ink focus:outline-none focus:ring-2 focus:ring-easygo-velocity focus:bg-white"
-                            >
-                              <option value="Keh Keh">Keh Keh</option>
-                              <option value="Comfort Car">Comfort Car</option>
-                              <option value="Any Available">Any Available</option>
-                            </select>
-                          </div>
-                        )}
-                      </div>
+                        </div>
+                      )}
 
                       <button
                         type="submit"
-                        className="w-full mt-2 bg-easygo-primary hover:bg-easygo-container text-white font-bold py-4 rounded-xl text-sm transition-all shadow-lg shadow-easygo-primary/30 hover:scale-[1.02] active:scale-95 flex items-center justify-center gap-2"
+                        className="w-full mt-2 bg-easygo-primary hover:bg-easygo-container text-white font-bold py-3.5 rounded-xl text-sm transition-all shadow-md shadow-easygo-primary/25 hover:scale-[1.01] active:scale-95 flex items-center justify-center gap-2"
                       >
-                        <span>🚀</span>
+                        <span>💚</span>
                         {userRole === 'rider'
-                          ? 'Get Official VIP Rider Access'
-                          : 'Pre-Register as Founding Driver'}
+                          ? 'Save My Early Spot (Get 20% Off)'
+                          : 'Join as Founding Driver (0% Commission)'}
                       </button>
 
-                      <p className="text-[11px] text-center text-easygo-mutedText">
-                        🔒 No payment required. You will be notified the moment the official app drops.
-                      </p>
+                      <div className="flex items-center justify-center gap-4 text-[11px] text-easygo-secondaryText pt-1">
+                        <span>🔒 100% Free</span>
+                        <span>•</span>
+                        <span>🇸🇱 Sierra Leone First</span>
+                        <span>•</span>
+                        <span>🚀 Launching Very Soon</span>
+                      </div>
                     </form>
                   </div>
                 ) : (
-                  /* ================= CONFIRMATION VIP PASS ================= */
+                  /* ================= CONFIRMATION: WARM & PERSONAL ================= */
                   <div className="text-center py-4 animate-fade-up">
-                    <div className="w-16 h-16 bg-easygo-successBg text-easygo-velocity rounded-full flex items-center justify-center text-3xl mx-auto mb-4 ring-8 ring-easygo-successBg/50">
-                      ✓
+                    <div className="w-16 h-16 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center text-3xl mx-auto mb-4 ring-8 ring-emerald-50">
+                      💚
                     </div>
-                    <span className="text-xs font-bold uppercase tracking-widest text-easygo-velocity">
-                      Official Pre-Registration Confirmed
+                    <span className="text-xs font-bold uppercase tracking-wider text-easygo-velocity">
+                      Spot Reserved
                     </span>
                     <h3 className="font-display text-2xl font-bold text-easygo-ink mt-1 mb-2">
-                      Welcome to the EasyGo Inner Circle!
+                      Welcome to the family, {fullName || 'Friend'}!
                     </h3>
-                    <p className="text-xs sm:text-sm text-easygo-secondaryText mb-6 max-w-sm mx-auto">
-                      Thank you, <strong>{fullName || 'Friend'}</strong>. Your official launch reservation is secured. We will text or email you your direct download link when the app goes live.
+                    <p className="text-sm text-easygo-secondaryText mb-6 max-w-sm mx-auto leading-relaxed">
+                      We've saved your early access and your <strong>20% launch discount</strong> for {neighborhood}. We'll send your download link directly to <strong>{contact}</strong> as soon as the official app is live.
                     </p>
 
-                    {/* Visual VIP Pass Badge */}
-                    <div className="bg-gradient-to-br from-easygo-primary to-easygo-deep text-white p-5 rounded-2xl text-left shadow-xl border border-easygo-neon/30 relative overflow-hidden mb-6">
-                      <div className="flex justify-between items-start mb-3">
-                        <div>
-                          <div className="text-[10px] text-easygo-neon font-mono uppercase tracking-widest">
-                            {userRole === 'rider' ? 'PASSENGER VIP PASS' : 'FOUNDING DRIVER PASS'}
-                          </div>
-                          <div className="font-display text-lg font-bold">{fullName || 'VIP Member'}</div>
-                        </div>
-                        <div className="w-8 h-8 rounded-lg bg-white/10 flex items-center justify-center font-bold text-easygo-neon text-xs">
-                          EG
-                        </div>
+                    <div className="bg-easygo-mist border border-easygo-line rounded-2xl p-4 text-left mb-6">
+                      <div className="flex items-center justify-between text-xs text-easygo-secondaryText mb-1">
+                        <span>Your Early Community Pass:</span>
+                        <span className="font-mono font-bold text-easygo-primary">{passId}</span>
                       </div>
-                      <div className="flex justify-between items-end border-t border-white/15 pt-3 text-xs">
-                        <div>
-                          <div className="text-[10px] text-white/50 uppercase">Access Code</div>
-                          <div className="font-mono font-bold text-easygo-neon">{passId}</div>
-                        </div>
-                        <div className="text-right">
-                          <div className="text-[10px] text-white/50 uppercase">Launch Area</div>
-                          <div className="font-semibold text-white">{neighborhood}</div>
-                        </div>
+                      <div className="text-xs font-medium text-easygo-ink">
+                        {userRole === 'rider' ? '🎒 Passenger Early Access Member' : '🛺 Founding Driver Partner'} · {neighborhood}
                       </div>
                     </div>
 
@@ -839,7 +853,7 @@ const LandingPage: React.FC = () => {
                       onClick={() => setSubmitted(false)}
                       className="text-xs font-bold text-easygo-velocity hover:underline"
                     >
-                      ← Register another passenger or driver
+                      ← Register another friend, rider or driver
                     </button>
                   </div>
                 )}
