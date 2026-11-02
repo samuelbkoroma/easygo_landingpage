@@ -26,6 +26,13 @@ html {
   color: transparent;
 }
 
+.text-gradient-gold {
+  background: linear-gradient(90deg, #FFE082, #FFB800, #FFA000);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
 /* Dark section glow orbs */
 .glow-orb {
   position: absolute;
@@ -68,4 +75,15 @@ html {
 .group:hover .step-number {
   transform: translateX(-8px) scale(1.05);
   color: #A0F4C3;
+}
+
+/* Shimmer animation */
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+.animate-shimmer {
+  background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.18) 50%, rgba(255,255,255,0) 100%);
+  background-size: 200% 100%;
+  animation: shimmer 3s infinite;
 }
