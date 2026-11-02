@@ -256,6 +256,10 @@ const FAQS = [
     q: 'What safety features are active on official launch day?',
     a: 'Every single driver undergoes in-person SLRSA license and vehicle verification. Every trip is monitored in real-time with GPS telemetry, and our one-tap emergency SOS button connects directly to our 24/7 Freetown operations dispatch team.',
   },
+  {
+    q: 'How can I reach the official EasyGo team directly?',
+    a: 'You can call or WhatsApp our official Sierra Leone line directly at +232 76 536443. Whether you have questions about riding, becoming a driver partner, or fleet collaboration, our local Freetown team is ready to help.',
+  },
 ];
 
 /* ============================================================
@@ -269,6 +273,7 @@ const NAV_LINKS = [
   { label: 'Live Experience', href: '#experience' },
   { label: 'Payments', href: '#payments' },
   { label: 'FAQ', href: '#faq' },
+  { label: 'Contact', href: '#contact' },
 ];
 
 const MARQUEE_ITEMS = [
@@ -456,15 +461,25 @@ const LandingPage: React.FC = () => {
             </span>
             <span className="font-semibold tracking-wide truncate">
               <strong className="text-easygo-neon font-black uppercase tracking-wider mr-1.5">Official Launch Notice:</strong>
-              The official EasyGo platform is coming very soon to Freetown! Pre-registration is now open.
+              The official EasyGo platform is coming very soon to Freetown!
             </span>
           </div>
-          <a
-            href="#pre-register"
-            className="hidden md:inline-flex items-center gap-1.5 bg-easygo-neon text-easygo-primary px-3 py-1 rounded-full text-xs font-bold hover:bg-white transition-all shrink-0 active:scale-95 shadow-sm"
-          >
-            Claim VIP Spot →
-          </a>
+          <div className="flex items-center gap-3 shrink-0">
+            <a
+              href="https://wa.me/23276536443"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 bg-white/10 hover:bg-white/20 text-easygo-neon hover:text-white px-3 py-1 rounded-full text-xs font-bold transition-all border border-white/15"
+            >
+              <span>💬</span> WhatsApp: +232 76 536443
+            </a>
+            <a
+              href="#pre-register"
+              className="hidden md:inline-flex items-center gap-1.5 bg-easygo-neon text-easygo-primary px-3 py-1 rounded-full text-xs font-bold hover:bg-white transition-all shrink-0 active:scale-95 shadow-sm"
+            >
+              Claim VIP Spot →
+            </a>
+          </div>
         </div>
       </div>
 
@@ -504,6 +519,14 @@ const LandingPage: React.FC = () => {
           {/* CTA Button & Mobile Toggle */}
           <div className="flex items-center gap-3">
             <a
+              href="tel:+23276536443"
+              className="hidden xl:inline-flex items-center gap-1.5 text-xs font-bold text-easygo-primary bg-easygo-mist hover:bg-easygo-successBg border border-easygo-line px-3.5 py-2 rounded-full transition-all"
+              title="Call EasyGo Support"
+            >
+              <span>📞</span> +232 76 536443
+            </a>
+
+            <a
               href="#pre-register"
               className="hidden sm:inline-flex items-center gap-2 bg-easygo-primary text-white px-5 py-2.5 rounded-full text-sm font-bold hover:bg-easygo-container hover:shadow-lg hover:shadow-easygo-primary/30 hover:scale-105 transition-all active:scale-95"
             >
@@ -542,13 +565,29 @@ const LandingPage: React.FC = () => {
                   {l.label}
                 </a>
               ))}
-              <a
-                href="#pre-register"
-                onClick={() => setMobileMenuOpen(false)}
-                className="mt-2 w-full text-center bg-easygo-velocity text-white py-3 rounded-xl font-bold shadow-md"
-              >
-                Pre-Register for Official Launch 🚀
-              </a>
+              <div className="pt-2 flex flex-col gap-2.5">
+                <a
+                  href="tel:+23276536443"
+                  className="flex items-center justify-center gap-2 py-3 rounded-xl bg-easygo-mist text-easygo-primary font-bold text-sm border border-easygo-line"
+                >
+                  <span>📞</span> Call Us: +232 76 536443
+                </a>
+                <a
+                  href="https://wa.me/23276536443"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-center gap-2 py-3 rounded-xl bg-[#25D366] text-white font-bold text-sm shadow-sm"
+                >
+                  <span>💬</span> WhatsApp (+232 76 536443)
+                </a>
+                <a
+                  href="#pre-register"
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="w-full text-center bg-easygo-velocity text-white py-3 rounded-xl font-bold shadow-md mt-1"
+                >
+                  Pre-Register for Official Launch 🚀
+                </a>
+              </div>
             </div>
           </div>
         )}
@@ -1365,28 +1404,67 @@ const LandingPage: React.FC = () => {
       </section>
 
       {/* ============================================================
-          🤝 STRATEGIC PARTNERS & INVESTORS
+          🤝 STRATEGIC PARTNERS, INVESTORS & DIRECT CONTACT
           ============================================================ */}
-      <section id="investors" className="py-28 px-6 bg-gradient-to-br from-easygo-heroFrom via-easygo-secondary to-easygo-heroTo relative overflow-hidden text-white">
+      <section id="contact" className="py-28 px-6 bg-gradient-to-br from-easygo-heroFrom via-easygo-secondary to-easygo-heroTo relative overflow-hidden text-white">
+        <div id="investors" className="sr-only">Investors</div>
         <div className="glow-orb w-[28rem] h-[28rem] bg-easygo-pulse/25 top-[-10%] left-[-10%]"></div>
         <div className="absolute top-0 right-0 w-1/2 h-full bg-white/5 skew-x-12 translate-x-20 pointer-events-none"></div>
 
         <div className="max-w-4xl mx-auto text-center relative z-10">
           <Reveal>
             <div className="inline-flex items-center gap-2 px-4 py-1.5 mb-4 text-xs font-bold uppercase tracking-wider bg-easygo-neon/15 text-easygo-neon rounded-full border border-easygo-neon/30">
-              Partnerships & Growth
+              Get in Touch with EasyGo
             </div>
             <h2 className="font-display text-3xl sm:text-6xl font-bold mb-6 tracking-tight">
-              Shape the Future of Transit with <span className="text-gradient-neon">EasyGo.</span>
+              Reach Out to Us in <span className="text-gradient-neon">Freetown.</span>
             </h2>
-            <p className="text-white/80 text-base sm:text-xl mb-12 max-w-2xl mx-auto leading-relaxed">
-              We are moving towards the official launch in Freetown and looking for strategic fleet partners, corporate travel accounts, and investors.
+            <p className="text-white/80 text-base sm:text-xl mb-10 max-w-2xl mx-auto leading-relaxed">
+              Whether you are an everyday rider, a driver looking to join our founding fleet, or a strategic business partner — our local team is here for you.
             </p>
+          </Reveal>
+
+          {/* Direct Contact & Helpline Card */}
+          <Reveal delay={80}>
+            <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-3xl p-6 sm:p-8 max-w-2xl mx-auto mb-12 text-center shadow-xl">
+              <div className="text-xs font-bold uppercase tracking-widest text-easygo-neon mb-2">
+                Official Helpline & WhatsApp
+              </div>
+              <h3 className="font-display text-2xl sm:text-3xl font-bold text-white mb-2">
+                +232 76 536443
+              </h3>
+              <p className="text-xs sm:text-sm text-white/80 max-w-md mx-auto mb-6">
+                Direct line for Freetown rider support, driver onboarding, and general inquiries.
+              </p>
+              <div className="flex flex-wrap items-center justify-center gap-3">
+                <a
+                  href="tel:+23276536443"
+                  className="inline-flex items-center gap-2 bg-white text-easygo-primary px-6 py-3.5 rounded-xl font-bold text-sm hover:bg-easygo-neon hover:scale-105 transition-all shadow-lg active:scale-95"
+                >
+                  <span>📞</span> Call +232 76 536443
+                </a>
+                <a
+                  href="https://wa.me/23276536443"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 bg-[#25D366] text-white px-6 py-3.5 rounded-xl font-bold text-sm hover:brightness-110 hover:scale-105 transition-all shadow-lg active:scale-95"
+                >
+                  <span>💬</span> WhatsApp Us Directly
+                </a>
+              </div>
+            </div>
           </Reveal>
 
           {!invested ? (
             <Reveal delay={120}>
               <form onSubmit={handleInvest} className="bg-white p-6 sm:p-12 rounded-[2.5rem] shadow-2xl text-left max-w-2xl mx-auto text-easygo-ink">
+                <div className="text-xs font-bold uppercase tracking-widest text-easygo-velocity mb-1 ml-1">
+                  Partnership Inquiries
+                </div>
+                <h4 className="font-display text-xl font-bold text-easygo-ink mb-6 ml-1">
+                  Corporate Accounts & Fleet Partnerships
+                </h4>
+
                 <div className="grid sm:grid-cols-2 gap-5 mb-5">
                   <div>
                     <label className="block text-xs font-bold uppercase tracking-widest text-easygo-mutedText mb-1.5 ml-1">
@@ -1432,7 +1510,7 @@ const LandingPage: React.FC = () => {
                   type="submit"
                   className="w-full bg-easygo-primary text-white font-bold py-4 rounded-xl hover:bg-easygo-container hover:scale-[1.01] transition-all uppercase tracking-wider text-xs sm:text-sm shadow-xl shadow-easygo-primary/30 active:scale-95"
                 >
-                  Request Official Partner Package →
+                  Submit Inquiry →
                 </button>
               </form>
             </Reveal>
@@ -1450,16 +1528,30 @@ const LandingPage: React.FC = () => {
       <footer className="py-16 px-6 bg-easygo-night text-center text-white border-t border-white/10">
         <div className="max-w-7xl mx-auto">
           {/* Logo mark */}
-          <div className="flex items-center justify-center gap-2.5 mb-6 group cursor-pointer">
+          <div className="flex items-center justify-center gap-2.5 mb-4 group cursor-pointer">
             <div className="w-10 h-10 bg-easygo-primary rounded-xl flex items-center justify-center text-easygo-neon font-black transition-transform group-hover:rotate-12">
               EG
             </div>
             <div className="font-display text-2xl font-bold">EasyGo</div>
           </div>
 
-          <p className="text-white/70 text-xs sm:text-sm max-w-md mx-auto mb-8">
+          <p className="text-white/70 text-xs sm:text-sm max-w-md mx-auto mb-6">
             The official human-centric mobility platform for Sierra Leone. Built for riders, driver partners, and cities.
           </p>
+
+          {/* Contact Helpline Badge */}
+          <div className="mb-8 p-3.5 bg-white/5 rounded-2xl max-w-md mx-auto border border-white/10 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs">
+            <span className="text-white/70">Official Freetown Helpline:</span>
+            <div className="flex items-center gap-3">
+              <a href="tel:+23276536443" className="text-easygo-neon font-bold hover:underline flex items-center gap-1">
+                <span>📞</span> +232 76 536443
+              </a>
+              <span className="text-white/30">|</span>
+              <a href="https://wa.me/23276536443" target="_blank" rel="noopener noreferrer" className="text-[#25D366] font-bold hover:underline flex items-center gap-1">
+                <span>💬</span> WhatsApp
+              </a>
+            </div>
+          </div>
 
           <div className="flex justify-center flex-wrap gap-6 mb-8 text-xs sm:text-sm font-medium text-easygo-mutedText">
             {NAV_LINKS.map((l) => (
@@ -1478,6 +1570,19 @@ const LandingPage: React.FC = () => {
           </div>
         </div>
       </footer>
+
+      {/* Floating WhatsApp Quick Reachout Pill */}
+      <a
+        href="https://wa.me/23276536443"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="fixed bottom-6 right-6 z-50 flex items-center gap-2.5 bg-[#25D366] text-white px-4 py-3 rounded-full shadow-2xl hover:scale-105 transition-all font-bold text-xs sm:text-sm active:scale-95 border-2 border-white/40"
+        title="Chat with EasyGo on WhatsApp (+232 76 536443)"
+      >
+        <span className="text-base sm:text-lg">💬</span>
+        <span className="hidden sm:inline">Reach Us: <strong>+232 76 536443</strong></span>
+        <span className="sm:hidden">+232 76 536443</span>
+      </a>
     </div>
   );
 };
